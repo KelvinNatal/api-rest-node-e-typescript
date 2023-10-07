@@ -9,6 +9,6 @@ router.get('/', (_, res) => {
     return res.status(StatusCodes.OK).send('Olá DEV');
 });
 
-router.post('/cidades', CidadesController.create);
+router.post('/cidades', CidadesController.createValidation, CidadesController.create);
 
 export { router };
